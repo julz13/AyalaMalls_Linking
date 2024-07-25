@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6D6DDDD8-8EBE-4646-8FD7-41DEF1769356}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AyalaMalls_Linking</RootNamespace>
+    <AssemblyName>AyalaMalls_Linking</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.4.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.112.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\ZreadingAndMallLinkings\SolaireMallLinkingAPI\bin\Debug\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.0\lib\netstandard1.1\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.0\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.3.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tarsier.Database, Version=1.0.7812.21155, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\ZreadingAndMallLinkings\SolaireMallLinkingAPI\bin\Debug\Tarsier.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Tarsier.Extensions">
+      <HintPath>..\..\..\..\..\ZreadingAndMallLinkings\SolaireMallLinkingAPI\bin\Debug\Tarsier.Extensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants\ParadoxTable.cs" />
+    <Compile Include="Constants\Queries.cs" />
+    <Compile Include="Constants\TempDBName.cs" />
+    <Compile Include="Dialogs\InputPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\InputPassword.Designer.cs">
+      <DependentUpon>InputPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\CSVHelper.cs" />
+    <Compile Include="Helpers\DbAccess.cs" />
+    <Compile Include="Helpers\DbParadox.cs" />
+    <Compile Include="Helpers\DecimalExtensions.cs" />
+    <Compile Include="Helpers\EntityConversion.cs" />
+    <Compile Include="Helpers\ModelDataValidation.cs" />
+    <Compile Include="Helpers\ObjectFormatter.cs" />
+    <Compile Include="Helpers\PrintClass.cs" />
+    <Compile Include="Helpers\SettingsWriter.cs" />
+    <Compile Include="Helpers\StringManipulation.cs" />
+    <Compile Include="Helpers\Strings.cs" />
+    <Compile Include="LocalStorage\Attributes\DbColumnAttribute.cs" />
+    <Compile Include="LocalStorage\BaseStorage.cs" />
+    <Compile Include="LocalStorage\DailyDataStorage.cs" />
+    <Compile Include="LocalStorage\TransactionsDataStorage.cs" />
+    <Compile Include="LocalStorage\TransactionsDetailsStorage.cs" />
+    <Compile Include="Models\ConfigurationModel.cs" />
+    <Compile Include="Models\DailyData.cs" />
+    <Compile Include="Models\DailySalesFile.cs" />
+    <Compile Include="Models\PerTransactionsFile.cs" />
+    <Compile Include="Models\TransactionDataDetails.cs" />
+    <Compile Include="Models\TransactionsData.cs" />
+    <Compile Include="Models\TransactionsFile.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\Cipher.cs" />
+    <Compile Include="Security\GZipper.cs" />
+    <Compile Include="Security\Xor.cs" />
+    <Compile Include="Views\frmConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmConfig.Designer.cs">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmDateFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmDateFilter.Designer.cs">
+      <DependentUpon>frmDateFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmInvoiceSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmInvoiceSales.Designer.cs">
+      <DependentUpon>frmInvoiceSales.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Dialogs\InputPassword.resx">
+      <DependentUpon>InputPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\frmConfig.resx">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmDateFilter.resx">
+      <DependentUpon>frmDateFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmInvoiceSales.resx">
+      <DependentUpon>frmInvoiceSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
